@@ -1,4 +1,4 @@
-name: Claude PR Action 
+name: Claude PR Reply 
 
 permissions:
   contents: write
@@ -40,7 +40,8 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
           aws-region: ap-northeast-1
 
-      - uses: anthropics/claude-code-action@beta
+      - name: Run Claude Code Reply
+        uses: anthropics/claude-code-action@beta
         with:
           trigger_phrase: "@claude"
           timeout_minutes: "60"
