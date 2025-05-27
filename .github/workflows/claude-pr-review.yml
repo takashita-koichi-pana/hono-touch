@@ -37,6 +37,7 @@ jobs:
         id: code-review
         uses: anthropics/claude-code-action@beta
         with:
+          trigger_phrase: ""
           timeout_minutes: "60"
           github_token: ${{ steps.app-token.outputs.token }}
           use_bedrock: "true"
