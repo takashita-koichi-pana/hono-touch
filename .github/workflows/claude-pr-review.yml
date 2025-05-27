@@ -1,5 +1,11 @@
 name: Claude Code Review
 
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  id-token: write 
+
 on:
   pull_request:
     types: [opened] # PR作成時に実行
